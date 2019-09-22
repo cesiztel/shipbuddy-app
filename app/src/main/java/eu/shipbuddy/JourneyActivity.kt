@@ -6,13 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.Marker
-import com.google.maps.android.data.geojson.GeoJsonLayer
 import eu.shipbuddy.model.Coordinate
 import kotlinx.android.synthetic.main.activity_journey.*
 import kotlinx.android.synthetic.main.activity_journey.view.*
@@ -89,6 +82,7 @@ class JourneyActivity : AppCompatActivity() {
         map?.setBuiltInZoomControls(false)
 
         setStartLocation()
+        clearDataStorage()
         generateMapContents()
         addImageOverlay()
         addMarkers()
@@ -301,6 +295,14 @@ class JourneyActivity : AppCompatActivity() {
 
         //polygons
 
+    }
+
+    fun clearDataStorage(){
+        localData.routeWaypoints.clear()
+        localData.mapPrimaryOverlays.clear()
+        localData.mapOtherOverlays.clear()
+        localData.routeCoordinates.clear()
+        localData.markers.clear()
     }
 
     fun refreshMapRendering(){
