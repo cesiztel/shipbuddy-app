@@ -200,16 +200,16 @@ class JourneyActivity : AppCompatActivity() {
     fun generateMapContents(){
 
         //primary true color map tiles
-        val trueColorImageRhein = BitmapFactory.decodeResource(resources, R.drawable.rhein_true_color)
-        val trueColorMapTileRhein = OverlayTile(BBox(53.58842920541724f, 53.92375094101389f, 9.144744873046875f, 9.721527099609373f), trueColorImageRhein)
+        val trueColorImageRhein = BitmapFactory.decodeResource(resources, R.drawable.mannheim_true_color)
+        val trueColorMapTileRhein = OverlayTile(BBox(49.169134f, 49.744006f, 7.554474f, 9.321899f), trueColorImageRhein)
         localData.mapPrimaryOverlays.add(trueColorMapTileRhein)
 
         //other map overlay tiles
 
         //markers of events etc
-        val mapMarker1 = MapMarker(GeoPoint(53.58842920541724, 9.144744873046875), "Marker 1", resources.getDrawable(R.drawable.ic_error_outline_black_24dp))
-        val mapMarker2 = MapMarker(GeoPoint(53.68942920841724, 9.444744873046875), "Marker 2", resources.getDrawable(R.drawable.ic_error_outline_black_24dp))
-        val mapMarker3 = MapMarker(GeoPoint(53.89042920541724, 9.442744873046875), "Marker 3", resources.getDrawable(R.drawable.ic_error_outline_black_24dp))
+        val mapMarker1 = MapMarker(GeoPoint(49.528105376477484, 8.429088592529297), "Heavy storm", resources.getDrawable(R.drawable.ic_error_outline_black_24dp))
+        val mapMarker2 = MapMarker(GeoPoint(49.51088778512465, 8.435955047607422), "Increased current", resources.getDrawable(R.drawable.ic_error_outline_black_24dp))
+        val mapMarker3 = MapMarker(GeoPoint(49.470424891880455, 8.4639573097229), "Alien invasion", resources.getDrawable(R.drawable.ic_error_outline_black_24dp))
         localData.markers.add(mapMarker1)
         localData.markers.add(mapMarker2)
         localData.markers.add(mapMarker3)
