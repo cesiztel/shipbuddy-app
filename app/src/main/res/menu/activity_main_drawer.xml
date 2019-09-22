@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_missions"
+                android:icon="@drawable/ic_missions"
+                android:title="Missions"/>
+        <item
+                android:id="@+id/nav_customers"
+                android:icon="@drawable/ic_customers"
+                android:title="Customers"/>
+        <item
+                android:id="@+id/nav_reports"
+                android:icon="@drawable/ic_reports"
+                android:title="Reports"/>
+    </group>
+
+</menu>
